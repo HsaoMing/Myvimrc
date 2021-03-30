@@ -1,2 +1,0 @@
-# Myvimrc
-Learning vimscript
