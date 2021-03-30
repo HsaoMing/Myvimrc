@@ -49,5 +49,4 @@ inoremap <CR> <ESC>$i<Right><CR>
 "add "
 nnoremap <Leader>" viw<ESC>a"<ESC>hbi"<ESC>lel
 
-iabbrev @@ 1922556502@qq.com
 "  )))
