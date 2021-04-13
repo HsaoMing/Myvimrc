@@ -7,6 +7,7 @@ set tabstop=4
 set mouse=i
 set shiftwidth=4
 set autoindent
+"colorscheme murphy
 
 set foldmarker=(((,)))
 syntax on
@@ -18,9 +19,10 @@ filetype plugin indent on
 "<Leader>
 let mapleader=","
 
+"get file name
 "Plugin  (((
 call plug#begin('~/.vim/bundle')
-"Plug 'artur-shaik/vim-javacomplete2'
+Plug 'scrooloose/nerdtree'
 call plug#end()
 "  )))
 
@@ -31,9 +33,11 @@ augroup filetype_vim
 augroup END
 "  )))
 
-autocmd FileType java setlocal omnifunc=javacomplete#Complete
+"autocmd FileType java setlocal omnifunc=javacomplete#Complete
 autocmd FileType java inoremap <buffer> sop System.out.println();<ESC>hi
-autocmd FileType java nnoremap <buffer> # I//<ESC> 
+autocmd FileType java nnoremap <buffer> # I//<ESC>
+autocmd FileType java inoremap <buffer> main public static main(String args[]){<CR>}<ESC>k$i<Right><CR>
+
 "Mappings  (((
 inoremap { {<CR>}<ESC>k$i<Right><CR>
 inoremap ' ''<ESC>i
@@ -48,5 +52,11 @@ inoremap jk <ESC>
 inoremap <CR> <ESC>$i<Right><CR>
 "add "
 nnoremap <Leader>" viw<ESC>a"<ESC>hbi"<ESC>lel
+
+nnoremap <Leader>t :NERDTree<CR>
+noremap <C-h> <C-w><C-h>
+noremap <C-j> <C-w><C-j>
+noremap <C-k> <C-w><C-k>
+noremap <C-l> <C-w><C-l>
 
 "  )))
